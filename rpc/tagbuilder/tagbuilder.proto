@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option go_package = "tagbuilder";
+
+// Demo service builds tags for clients
+service TagBuilder {
+  // MakeTag builds a tag
+  rpc GetTags(Merchant) returns (TagContainer);
+}
+
+// Merchant for
+message Merchant {
+  int32 merchantId = 1;
+}
+
+message Tag {
+  string tag = 1;
+}
+
+// Tracking
+message TagContainer {
+  int32 merchantId  = 1;
+  repeated Tag tags = 2;
+}
