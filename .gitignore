@@ -18,3 +18,5 @@ cmd/server/server
 cmd/client/debug
 
 cmd/client/client
+
+workdir/
